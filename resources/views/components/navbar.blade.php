@@ -2,7 +2,7 @@
   <div class="logo-container flex gap-[30px] items-center">
     <a href="{{ route('front.index') }}" class="flex shrink-0 justify-center items-center gap-2">
       <img class="w-10 h-10" src="{{ asset('assets/images/logos/Logo.png') }}" alt="logo" />
-      <span class="font-bold text-2xl">Fomo</span>
+      <span class="font-bold text-2xl">FomoNews</span>
     </a>
     <div class="h-12 border border-[#E8EBF4]"></div>
     <form method="GET" action="{{ route('front.search') }}" class="w-[500px] flex items-center rounded-full border border-[#E8EBF4] p-[12px_20px] gap-[10px] focus-within:ring-2 focus-within:ring-[#FF6B18] transition-all duration-300">
