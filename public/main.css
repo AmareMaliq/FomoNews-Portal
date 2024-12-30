@@ -1,3 +1,18 @@
+/* slider category */
+@layer utilities {
+    .cursor-grab {
+        @apply cursor-grab;
+    }
+    .cursor-grabbing {
+        @apply cursor-grabbing;
+    }
+}
+#Category {
+    scroll-behavior: smooth;
+}
+button {
+    cursor: pointer;
+}
 /* width */
 .custom-scrollbar::-webkit-scrollbar {
     width: 6px;

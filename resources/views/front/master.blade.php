@@ -18,6 +18,7 @@
   @yield('content')
   {{-- before itu buat link file atau link package buat ke semua halaman --}}
   @stack('before-scripts')
+	<script src="{{ asset('customjs/sliderCategory.js') }}"></script>
    {{-- aafter itu buat link file atau link package buat ke halaman tertentu aja --}}
   @stack('after-scripts')
 </html>

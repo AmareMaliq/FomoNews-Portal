@@ -4,7 +4,7 @@
 <body class="font-[Poppins] pb-[83px]">
   {{-- Navbar --}}
   <x-navbar/>
-  <nav id="Category" class="max-w-[1130px] mx-auto flex justify-center items-center gap-4 mt-[30px]">
+  {{-- <nav id="Category" class="max-w-[1130px] mx-auto flex justify-center items-center gap-4 mt-[30px]">
     @foreach ($categories as $category_item)
     <a 
       href="{{ route('front.category', $category_item->slug) }}" 
@@ -15,7 +15,42 @@
       <span>{{ $category_item->name }}</span>
     </a>
     @endforeach
-  </nav>
+  </nav> --}}
+
+		<div class="relative max-w-[1300px] mx-auto mt-[30px]">
+		<!-- Tombol Previous -->
+		<button 
+		id="prev" 
+		class="absolute left-[-50px] top-1/2 hidden -translate-y-1/2 z-10 p-3 bg-white border border-gray-200 rounded-full shadow-md hover:bg-gray-100"
+		>
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-gray-700">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+		</svg>
+		</button>
+		<nav id="Category" class="flex gap-4 cursor-grab active:cursor-grabbing overflow-hidden">
+			<div id="CategoryInner" class="flex transition-transform space-x-2 duration-300 py-6 px-6">
+				@foreach ($categories as $category_item)
+				<a 
+					href="{{ route('front.category', $category_item->slug) }}" 
+					class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 hover:ring-2 hover:ring-[#FF6B18] {{ Request::is('category/' . $category_item->slug) ? 'border-4 border-[#FF6B18]' : 'border border-[#EEF0F7]' }}">
+					<div class="w-6 h-6 flex shrink-0">
+						<img src="{{ Storage::url($category_item->icon) }}" alt="icon" />
+					</div>
+					<span>{{ $category_item->name }}</span>
+				</a>
+				@endforeach
+			</div>
+		</nav>
+		<!-- Tombol Next -->
+		<button 
+		id="next" 
+		class="absolute right-[-40px] top-1/2 hidden -translate-y-1/2 z-10 p-3 bg-white border border-gray-200 rounded-full shadow-md hover:bg-gray-100"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-gray-700">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+			</svg>
+		</button>
+	</div>
 	<section id="author" class="max-w-[1130px] mx-auto flex  flex-col gap-[30px] mt-[70px]">
 		<div id="title" class="flex items-start gap-[10px] mb-10">
 			{{-- <h1 class="text-4xl leading-[45px] font-bold">Article News</h1>
@@ -70,4 +105,5 @@
 		</div>
 	</section>
 </body>
+<x-footer/>
 @endsection
