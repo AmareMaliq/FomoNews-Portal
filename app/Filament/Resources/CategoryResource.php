@@ -27,7 +27,6 @@ class CategoryResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                 ->required()
-                ->searchable()
                 ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state)))
                 ->live(debounce: 1000)
                 ->maxLength(255),

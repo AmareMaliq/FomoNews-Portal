@@ -23,35 +23,36 @@
     </a>
     @endforeach
   </nav>
-	<header class="flex flex-col items-center gap-[50px] mt-[70px]">
-		<div class="w-[1150px] h-[400px] flex shrink-0 ">
-			<img src="{{ Storage::url($articleNews->thumbnail) }}" class="object-cover w-full h-full rounded-xl" alt="cover thumbnail">
-		</div>
-		<div id="Headline" class="max-w-[1130px] mx-auto flex flex-col gap-4 items-center">
+	<header class="flex flex-col items-center gap-[50px] mt-[50px]">
+		<div id="Headline" class="max-w-[1130px] mx-auto flex flex-col gap-4 items-start">
 		
-			<h1 id="Title" class="font-bold text-[46px] leading-[60px] text-center two-lines">
+			<h1 id="Title" class="font-bold text-[46px] leading-[60px] text-start ">
         {{ $articleNews->name }}
       </h1>
-			<div class="flex items-center justify-center gap-[70px]">
+			<div class="flex mt-5 gap-[70px]">
 				<a id="Author" href="{{ route('front.author',$articleNews->author->slug) }}" class="w-fit h-fit">
 					<div class="flex items-center gap-3">
-						<div class="w-10 h-10 rounded-full overflow-hidden">
+						<div class="w-14 h-14 rounded-full overflow-hidden">
 							<img src="{{ Storage::url($articleNews->author->avatar) }}" class="object-cover w-full h-full" alt="avatar">
 						</div>
-						<div class="flex flex-col">
-							<p class="font-semibold text-sm leading-[21px]">{{ $articleNews->author->name }}</p>
-							<p class="text-xs leading-[18px] text-[#A3A6AE]">{{ $articleNews->author->occupation }}</p>
+						<div class="flex flex-col gap-1">
+							<p class="font-semibold text-lg leading-[21px]">{{ $articleNews->author->name }}</p>
+							<p class="text-sm leading-[18px] text-[#A3A6AE]">{{ $articleNews->author->occupation }}</p>
 						</div>
 					</div>
 				</a>
-				<div id="Rating" class="flex items-center gap-1">
+				{{-- <div id="Rating" class="flex items-center gap-1">
 					<div class="flex items-center">
 							<p class="w-fit text-[#A3A6AE]">{{ $articleNews->created_at->format('M d, Y') }} - {{ $articleNews->category->name }}</p>
 					</div>
 					<p class="font-semibold text-xs leading-[18px]">(12,490)</p>
-				</div>
+				</div> --}}
 			</div>
 		</div>
+		<div class="w-[1150px] h-[400px] flex shrink-0 ">
+			<img src="{{ Storage::url($articleNews->thumbnail) }}" class="object-center w-full h-full rounded-2xl" alt="cover thumbnail">
+		</div>
+	
 		
 	</header>
 	<section id="Article-container" class="max-w-[1130px] mx-auto flex gap-20 mt-[50px]">
