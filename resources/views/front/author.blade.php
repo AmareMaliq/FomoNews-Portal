@@ -1,7 +1,7 @@
 @extends('front.master')
 @section('content')
 
-<body class="font-[Poppins] pb-[83px]">
+<body class="font-[Poppins] ">
   {{-- Navbar --}}
   <x-navbar/>
   {{-- <nav id="Category" class="max-w-[1130px] mx-auto flex justify-center items-center gap-4 mt-[30px]">
@@ -91,7 +91,7 @@
 
 		</div>
 	</section>
-	<section id="Advertisement" class="max-w-[1130px] mx-auto flex justify-center mt-[70px]">
+	<section id="Advertisement" class="max-w-[1130px] mx-auto flex justify-center mt-[70px] mb-20">
 		<div class="flex flex-col gap-3 shrink-0 w-fit">
 			<a href="{{ $bannerAds->link }}">
 				<div class="w-[900px] h-[120px] flex shrink-0 border border-[#EEF0F7] rounded-2xl overflow-hidden">
@@ -105,5 +105,5 @@
 		</div>
 	</section>
 </body>
-<x-footer/>
+
 @endsection

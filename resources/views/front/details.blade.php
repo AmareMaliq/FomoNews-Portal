@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 <!-- CSS -->
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
-<link href="{{ asset('main.css') }}" rel="stylesheet" />
+
 
 @endpush
 @extends('front.master')
@@ -84,7 +84,7 @@
 				</div> --}}
 			</div>
 		</div>
-		<div class="w-[1150px] h-[500px] flex shrink-0 ">
+		<div class="w-[1150px] h-[600px] flex shrink-0 ">
 			<img src="{{ Storage::url($articleNews->thumbnail) }}" class="object-center w-full h-full rounded-2xl" alt="cover thumbnail">
 		</div>
 	
@@ -191,7 +191,7 @@
 
 	
 </body>
-<x-footer/>
+
 
 @endsection
 

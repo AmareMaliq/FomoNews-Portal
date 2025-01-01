@@ -1,4 +1,4 @@
-<footer class="border-b bg-white py-12 dark:bg-transparent">
+<footer class="border-t bg-white py-12 dark:bg-transparent">
   <div class="mx-auto max-w-5xl px-6">
       <div class="flex flex-wrap justify-between gap-6">
           <span class="text-caption order-last block text-center text-sm md:order-first">&copy 2024 .FomoNews , All rights reserved</span>
